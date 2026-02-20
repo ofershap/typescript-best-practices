@@ -48,6 +48,10 @@ Or copy `skills/` into your `.cursor/skills/` or `.claude/skills/` directory.
 - [python-best-practices](https://github.com/ofershap/python-best-practices) - Modern Python 3.12+
   type hints and patterns
 
+---
+
+If this helped your workflow, a star helps others find it.
+
 ## Author
 
 [![Made by ofershap](https://gitshow.dev/api/card/ofershap)](https://gitshow.dev/ofershap)
