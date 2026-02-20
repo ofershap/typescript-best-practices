@@ -11,6 +11,15 @@
   "homepage": "https://github.com/ofershap/typescript-best-practices",
   "repository": "https://github.com/ofershap/typescript-best-practices",
   "license": "MIT",
-  "keywords": ["typescript", "ts", "best-practices", "strict-mode", "type-safety", "cursor-plugin", "claude-code", "ai-agent"],
+  "keywords": [
+    "typescript",
+    "ts",
+    "best-practices",
+    "strict-mode",
+    "type-safety",
+    "cursor-plugin",
+    "claude-code",
+    "ai-agent"
+  ],
   "logo": "assets/logo.svg"
 }

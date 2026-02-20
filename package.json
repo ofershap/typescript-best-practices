@@ -8,7 +8,16 @@
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
-  "keywords": ["typescript", "ts", "best-practices", "strict-mode", "type-safety", "cursor-plugin", "claude-code", "ai-agent"],
+  "keywords": [
+    "typescript",
+    "ts",
+    "best-practices",
+    "strict-mode",
+    "type-safety",
+    "cursor-plugin",
+    "claude-code",
+    "ai-agent"
+  ],
   "author": {
     "name": "Ofer Shapira",
     "url": "https://github.com/ofershap"
