@@ -1,23 +1,15 @@
 # TypeScript Best Practices
 
-Modern TypeScript patterns your AI agent should use. Strict mode, discriminated unions, satisfies
-operator, const assertions, and type-safe patterns for TypeScript 5.x.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Skills](https://img.shields.io/badge/skills.sh-typescript--best--practices-blue)](https://skills.sh/ofershap/typescript-best-practices/typescript-best-practices)
+
+Modern TypeScript 5.x patterns your AI agent should use. Strict mode, discriminated unions, `satisfies` operator, const assertions, branded types, `NoInfer`, `using`, and type-safe patterns.
+
+> AI coding assistants default to `any`, skip strict mode, use `as` instead of `satisfies`, and model states with optional fields instead of discriminated unions. This plugin enforces the patterns that make TypeScript worth using.
 
 ## Install
 
-### Cursor IDE
-
-```
-/add-plugin typescript-best-practices
-```
-
-### Claude Code
-
-```
-/plugin install typescript-best-practices
-```
-
-### Skills only (any agent)
+### Cursor / Claude Code / Windsurf
 
 ```bash
 npx skills add ofershap/typescript-best-practices/typescript-best-practices
@@ -27,39 +19,35 @@ Or copy `skills/` into your `.cursor/skills/` or `.claude/skills/` directory.
 
 ## What's Included
 
-### Skills
+| Type | Name | Description |
+|------|------|-------------|
+| Skill | `typescript-best-practices` | 13 rules for strict mode, satisfies, discriminated unions, branded types, NoInfer, and more |
+| Rule | `best-practices` | Always-on behavioral rule that enforces current TypeScript patterns |
+| Command | `/audit` | Scan your codebase for TypeScript anti-patterns |
 
-- **typescript-best-practices** - Modern TypeScript patterns your AI agent should use. Strict mode,
-  discriminated unions, satisfies operator, const assertions, and type-safe patterns for TypeScript
-  5.x.
+## What Agents Get Wrong
 
-### Rules
+| What the agent writes | What you should use |
+|-----------------------|---------------------|
+| `any` for uncertain types | `unknown` with type narrowing |
+| `as SomeType` to silence errors | `satisfies SomeType` for validation without widening |
+| `{ success?: Data; error?: string }` | Discriminated union with `type` field |
+| `strict: false` in tsconfig | `strict: true` with proper null handling |
+| `import { SomeType }` | `import type { SomeType }` for type-only imports |
+| `TypeVar` + `Generic[T]` patterns | `NoInfer<T>`, const assertions, branded types |
 
-- **best-practices** - Always-on rules that enforce current TypeScript patterns
+## Related Plugins
 
-### Commands
+- [tailwind-best-practices](https://github.com/ofershap/tailwind-best-practices) - Tailwind CSS v4 patterns
+- [drizzle-best-practices](https://github.com/ofershap/drizzle-best-practices) - Type-safe Drizzle ORM patterns
+- [python-best-practices](https://github.com/ofershap/python-best-practices) - Modern Python 3.12+ type hints and patterns
 
-- `/audit` - Scan your codebase for TypeScript anti-patterns
+## Author
 
-## Why This Plugin?
+[![Made by ofershap](https://gitshow.dev/api/card/ofershap)](https://gitshow.dev/ofershap)
 
-AI agents are trained on data that includes outdated patterns. This plugin ensures your agent uses
-current TypeScript best practices:
-
-1. **Using `any` instead of `unknown`** - Agents default to `any` when types are uncertain, opting
-   out of type safety entirely.
-
-2. **Skipping strict mode** - Agents often suggest `strict: false` or omit `strictNullChecks` to
-   avoid errors instead of fixing null/undefined handling.
-
-3. **Type assertions over `satisfies`** - Agents reach for `as` to silence errors, losing literal
-   types and bypassing validation. `satisfies` checks the shape without widening.
-
-4. **Optional fields instead of discriminated unions** - Agents model mutually exclusive states with
-   optional properties (success?, error?), leading to invalid combinations and weak narrowing.
-
-5. **Ignoring new TypeScript 5.x features** - Agents rarely use `NoInfer`, `using`, template literal
-   types, or `noUncheckedIndexedAccess`, missing stronger type guarantees.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
 
 ## License
 
