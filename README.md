@@ -1,7 +1,7 @@
 # TypeScript Best Practices
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/skills.sh-typescript--best--practices-blue)](https://skills.sh/ofershap/typescript-best-practices/typescript-best-practices)
+[![Skills](https://img.shields.io/badge/skills.sh-typescript--best--practices-blue)](https://skills.sh/ofershap/typescript-best-practices)
 
 Modern TypeScript 5.x patterns your AI agent should use. Strict mode, discriminated unions,
 `satisfies` operator, const assertions, branded types, `NoInfer`, `using`, and type-safe patterns.
@@ -15,7 +15,7 @@ Modern TypeScript 5.x patterns your AI agent should use. Strict mode, discrimina
 ### Cursor / Claude Code / Windsurf
 
 ```bash
-npx skills add ofershap/typescript-best-practices/typescript-best-practices
+npx skills add ofershap/typescript-best-practices
 ```
 
 Or copy `skills/` into your `.cursor/skills/` or `.claude/skills/` directory.
